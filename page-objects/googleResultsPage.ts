@@ -9,7 +9,7 @@ export class GoogleResultsPage {
     }
 
     async selectResultFromTheList(text: string) {
-        const resultSelected = this.page.locator('a').getByText(text).first()
+        const resultSelected = this.page.locator('a span').getByText(text).first()
         await expect(resultSelected).toBeVisible()
         await resultSelected.click()
     }
