@@ -24,6 +24,6 @@ test.describe('Tests for API automation', () => {
 
         const petManager = new PetManager(petsList)
         const petNameCounter = petManager.countPetNames()
-        console.log("Pet Name Counter:", JSON.stringify(petNameCounter, null, 2))
+        console.log("Pets sharing the same name:", JSON.stringify(petNameCounter, null, 2))
     })
 })
