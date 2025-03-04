@@ -9,14 +9,11 @@ export class WikipediaResultPage {
     }
 
     async searchForSomeText(text: string) {
-        // await this.page.goto('https://en.wikipedia.org/wiki/Automation')
-
         await this.page.waitForSelector('.mw-body-content') // Wait for article to be loaded
         const articleContent = this.page.locator('body')
         await expect(articleContent).toContainText(text)
     }
-        // -> Try out with element screenshot
-    
+        
     async takeScreenshot(filePath: string, isFullPage: boolean) {
         await this.page.screenshot({ path: filePath, fullPage: isFullPage })
     }
