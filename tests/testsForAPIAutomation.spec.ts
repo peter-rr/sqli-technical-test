@@ -1,6 +1,6 @@
 import { test, expect, request } from '@playwright/test'
-import { getPetsByStatus, createUser, getUser } from '../utils/api'
-import { testUser } from '../utils/user'
+import { getPetsByStatus, createUser, getUser } from '../utils/api-helpers'
+import { testUser } from '../utils/test-data'
 import { PetManager } from '../utils/PetManager'
 
 test.describe('Tests for API automation', () => {

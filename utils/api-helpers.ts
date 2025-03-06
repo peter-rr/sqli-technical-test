@@ -1,5 +1,5 @@
 import { APIRequestContext, expect, request } from '@playwright/test'
-import { testUser } from './user'
+
 
 export async function createUser(request: APIRequestContext, user: any) {
     const response = await request.post('https://petstore.swagger.io/v2/user', { data: user })    
